@@ -6,25 +6,25 @@ const FlightSearchPage = async ({
   searchParams: { departureLocation, arrivalLocation, departureDate },
 }) => {
     // search details
-  const response = await fetch(`${process.env.BASE_URL}/api/flight-segments`)
-  const searchDetails = await response.json()
+//   const response = await fetch(`${process.env.BASE_URL}/api/flight-segments`)
+//   const searchDetails = await response.json()
 
-    // flight details
-  const res = await fetch(`${process.env.BASE_URL}/api/flight`)
-  const flightData = await res.json()
+//     // flight details
+//   const res = await fetch(`${process.env.BASE_URL}/api/flight`)
+//   const flightData = await res.json()
 
-//   console.log(flightData);
+// //   console.log(flightData);
 
-  const filteredFlights = flightData.filter((flight) => {
-    return (
-      flight.legs[0].segment.departureLocation.toLowerCase() ===
-      departureLocation.toLowerCase() &&
-      flight.legs[0].segment.arrivalLocation.toLowerCase() ===
-        arrivalLocation.toLowerCase() &&
-      new Date(flight.legs[0].segment.departureDate).getTime() ===
-        new Date(departureDate).getTime()
-    )
-  })
+//   const filteredFlights = flightData.filter((flight) => {
+//     return (
+//       flight.legs[0].segment.departureLocation.toLowerCase() ===
+//       departureLocation.toLowerCase() &&
+//       flight.legs[0].segment.arrivalLocation.toLowerCase() ===
+//         arrivalLocation.toLowerCase() &&
+//       new Date(flight.legs[0].segment.departureDate).getTime() ===
+//         new Date(departureDate).getTime()
+//     )
+//   })
 
 //   console.log('filterd results', filteredFlights);
 
@@ -47,7 +47,7 @@ const FlightSearchPage = async ({
           />
           </Suspense> */}
 
-          {filteredFlights.length > 0 ? (
+          {/* {filteredFlights.length > 0 ? (
               <FlightListCard filteredFlights={filteredFlights}/>
           ) : (
             <div className="flex justify-center">
@@ -55,7 +55,7 @@ const FlightSearchPage = async ({
 
             </div>
           )
-        }
+        } */}
 
         </div>
       </div>
