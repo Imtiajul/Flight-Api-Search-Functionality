@@ -18,7 +18,7 @@ export default async function Home() {
                 We will provide you the best rate around the world!
             </p>
             <Suspense>
-            <Search getSearchDetails={searchDetails} />
+              {/* <Search getSearchDetails={searchDetails} /> */}
             </Suspense>
         </div>
     </div>
