@@ -38,14 +38,14 @@ const FlightSearchPage = async ({
           <p className="my-2 text-[#5f5e5e] text-center">
             We will provide you the best rate around the world!
           </p>
-          <Suspense>
+          {/* <Suspense>
           <Search
             getSearchDetails={searchDetails}
             departureLocation={departureLocation}
             arrivalLocation={arrivalLocation}
             departureDate={departureDate}
           />
-          </Suspense>
+          </Suspense> */}
 
           {filteredFlights.length > 0 ? (
               <FlightListCard filteredFlights={filteredFlights}/>
