@@ -30,7 +30,7 @@ const SearchInput = ({getSearchDetails, inputType, handleInputs, searchTerm }) =
       } else if (inputType === 'arrivalLocation') {
         const found = getSearchDetails?.filter((route) => {
 
-          console.log('arrivalTerm', searchTerm);
+          // console.log('arrivalTerm', searchTerm);
 
           // console.log('arrivalLocation', route.searchDetails.departureLocation);
           return route?.searchDetails?.arrivalLocation?.toLowerCase().includes(searchTerm.toLowerCase());
