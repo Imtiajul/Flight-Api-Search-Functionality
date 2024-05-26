@@ -2,9 +2,9 @@ import Search from "@/_components/search/Search";
 import { Suspense } from "react";
 
 export default async function Home() {
-    const response = await fetch(`${process.env.BASE_URL}/api/flight-segments`);
+    // const response = await fetch(`${process.env.BASE_URL}/api/flight-segments`);
 
-    const searchDetails = await response.json();
+    // const searchDetails = await response.json();
     // console.log('searchDetails', searchDetails)
 
   return (
@@ -17,9 +17,9 @@ export default async function Home() {
             <p className="my-2 text-[#5f5e5e] text-center">
                 We will provide you the best rate around the world!
             </p>
-            <Suspense>
+            {/* <Suspense>
               <Search getSearchDetails={searchDetails} />
-            </Suspense>
+            </Suspense> */}
         </div>
     </div>
 </section>

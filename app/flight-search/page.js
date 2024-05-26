@@ -6,25 +6,25 @@ const FlightSearchPage = async ({
   searchParams: { departureLocation, arrivalLocation, departureDate },
 }) => {
     // search details
-  const response = await fetch(`${process.env.BASE_URL}/api/flight-segments`)
-  const searchDetails = await response.json()
+  // const response = await fetch(`${process.env.BASE_URL}/api/flight-segments`)
+  // const searchDetails = await response.json()
 
-    // flight details
-  const res = await fetch(`${process.env.BASE_URL}/api/flight`)
-  const flightData = await res.json()
+  //   // flight details
+  // const res = await fetch(`${process.env.BASE_URL}/api/flight`)
+  // const flightData = await res.json()
 
 //   console.log(flightData);
 
-  const filteredFlights = flightData.filter((flight) => {
-    return (
-      flight.legs[0].segment.departureLocation.toLowerCase() ===
-      departureLocation.toLowerCase() &&
-      flight.legs[0].segment.arrivalLocation.toLowerCase() ===
-        arrivalLocation.toLowerCase() &&
-      new Date(flight.legs[0].segment.departureDate).getTime() ===
-        new Date(departureDate).getTime()
-    )
-  })
+  // const filteredFlights = flightData.filter((flight) => {
+  //   return (
+  //     flight.legs[0].segment.departureLocation.toLowerCase() ===
+  //     departureLocation.toLowerCase() &&
+  //     flight.legs[0].segment.arrivalLocation.toLowerCase() ===
+  //       arrivalLocation.toLowerCase() &&
+  //     new Date(flight.legs[0].segment.departureDate).getTime() ===
+  //       new Date(departureDate).getTime()
+  //   )
+  // })
 
 //   console.log('filterd results', filteredFlights);
 
@@ -38,7 +38,7 @@ const FlightSearchPage = async ({
           <p className="my-2 text-[#5f5e5e] text-center">
             We will provide you the best rate around the world!
           </p>
-          <Suspense>
+          {/* <Suspense>
           <Search
             getSearchDetails={searchDetails}
             departureLocation={departureLocation}
@@ -55,7 +55,7 @@ const FlightSearchPage = async ({
 
             </div>
           )
-        }
+        } */}
 
         </div>
       </div>
