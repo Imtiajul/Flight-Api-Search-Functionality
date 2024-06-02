@@ -68,7 +68,7 @@ const SearchInput = ({getSearchDetails, inputType, handleInputs, searchTerm }) =
           />
         </button>
       </div>
-      {searchTerm && searchTerm.trim().length > 0 && closeSearchResults && (
+      {searchTerm.trim().length > 0 && closeSearchResults && (
           <InputSearchResults inputType={inputType} searchResults={searchResults}
            setCloseSearchResults={setCloseSearchResults} 
            changeInputCity={handleListChange}

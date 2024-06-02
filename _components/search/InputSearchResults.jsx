@@ -8,7 +8,7 @@ const InputSearchResults = ({
     <div className="absolute left-4 top-15 z-[999] w-full rounded-md bg-white p-2 shadow">
       <ul
         role="list"
-        className="divide-y divide-gray-100 [:>*]:py-2 overflow-hidden"
+        className={`"divide-y divide-gray-100 [:>*]:py-2 overflow-y-scroll ${searchResults.length>10 && "h-72"}`}
       >
         {searchResults.map((item, index) => {
           const city =
@@ -16,7 +16,7 @@ const InputSearchResults = ({
               ? item.searchDetails.arrivalLocation
               : item.searchDetails.departureLocation
 
-          if (index > 10) return null
+          // if (index > 10) return null
           return (
             <li
               onClick={() => {
